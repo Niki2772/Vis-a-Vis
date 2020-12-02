@@ -1,0 +1,44 @@
+.header {
+  background-color: #fff;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1530px;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+}
+
+.brandLogo {
+  cursor: pointer;
+}
+
+.navWrap, .navIn {
+  display: flex;
+  align-items: center;
+  li {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 25px
+    }
+    a {
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 24px;
+      display: block;
+      padding: 15px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
