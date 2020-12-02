@@ -176,7 +176,7 @@ svg:hover path {
   justify-content: flex-end;
 }
 
-.title {
+.titleH1 {
   color: rgba(74, 77, 78, 0.8);
   font-weight: bold;
   font-size: 180px;
@@ -203,7 +203,7 @@ svg:hover path {
   margin-right: 110px;
 }
 
-.subTitle {
+.titleH3 {
   font-weight: bold;
   font-size: 40px;
   line-height: 120%;
@@ -255,12 +255,125 @@ svg:hover path {
   display: block;
   content: "";
   width: 54px;
-  -webkit-border-radius: 59%;
-  -moz-border-radius: 59%;
-  border-radius: 59%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   height: 54px;
   background: #C4C4C4;
   margin-right: 36px;
+}
+
+.mainDetailsWrap {
+  margin-top: 318px;
+}
+
+.titleH2 {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 110%;
+}
+
+.mainDetailsInfo {
+  margin-top: 115px;
+  padding: 0 0 0 130px;
+  background-color: #E5E5E5;
+  width: 1725px;
+  height: 1300px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.detailsInfoWrap {
+  width: 1270px;
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 73px;
+  padding-top: 360px;
+}
+
+.line {
+  height: 3px;
+  background-color: #0093E6;
+  flex: 1;
+  margin-left: 9px;
+}
+
+.detailsListWrap .number {
+  font-size: 50px;
+  color: #0093E6;
+  margin-right: 30px;
+}
+.detailsListWrap ul {
+  height: 290px;
+  width: 100%;
+  overflow: hidden;
+}
+.detailsListWrap ul div {
+  width: 490px;
+  margin-right: 73px;
+}
+.detailsListWrap li {
+  margin-left: 45px;
+  display: flex;
+  align-items: baseline;
+  width: 45%;
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+
+.detailsImg {
+  position: absolute;
+  margin-top: 121px;
+  left: -195px;
+}
+
+.titleH4 {
+  font-weight: bold;
+  font-size: 30px;
+  width: 360px;
+}
+
+.optionsListWrap {
+  overflow: hidden;
+}
+.optionsListWrap li {
+  width: 50%;
+  font-weight: bold;
+  float: left;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.optionsListWrap li::before {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #0093E6;
+  margin-right: 22px;
+}
+
+.detailsInfo {
+  margin-top: 121px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.detailsInfo .detailsInfoIn {
+  width: 490px;
+  margin-right: 35px;
+}
+.detailsInfo .detailsInfoIn .description {
+  margin-bottom: 66px;
 }
 
 /*# sourceMappingURL=style.css.map */
