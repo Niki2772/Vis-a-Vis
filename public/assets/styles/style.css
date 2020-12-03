@@ -435,7 +435,6 @@ svg:hover path {
   -moz-border-radius: 50%;
   border-radius: 50%;
   background: #0093E6;
-  margin-right: 22px;
 }
 
 .swiper-container {
@@ -571,6 +570,49 @@ svg:hover path {
 .progressBarFooterWrap .button {
   width: 230px;
   padding: 0;
+}
+
+.infoCardsContainerWrap {
+  background-color: #F9F9F9;
+}
+
+.photoFrame {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.infoCardWrap {
+  width: 360px;
+  margin-right: 150px;
+  margin-bottom: 130px;
+}
+.infoCardWrap .titleH3 {
+  font-size: 28px;
+  line-height: 34px;
+  margin: 30px 0 20px;
+}
+.infoCardWrap .generalInfoDescription {
+  margin: 0 0 20px;
+}
+.infoCardWrap .swiperElUl {
+  margin-left: 22px;
+}
+.infoCardWrap .swiperElUl li {
+  margin-bottom: 10px;
+}
+.infoCardWrap .swiperElUl li::before {
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  left: -20px;
+}
+
+.infoCardsContainer {
+  padding: 160px 0 154px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

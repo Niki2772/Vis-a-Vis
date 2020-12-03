@@ -1,39 +1,45 @@
-.progressBarBlock{
-  svg{
+.progressBarBlock {
+  svg {
     margin-bottom: 30px;
   }
 }
 
-.progressBarWrap{
+.progressBarWrap {
   margin-top: 248px;
   margin-bottom: 180px;
-  .titleWrap{
+
+  .titleWrap {
     padding: 0;
     margin-bottom: 120px;
   }
-  .line{
+
+  .line {
     background-color: #E5E5E5;
     margin: 0;
   }
-  .titleH2{
+
+  .titleH2 {
     margin-right: 26px;
   }
 }
-.progressBarDesription{
+
+.progressBarDesription {
   font-weight: bold;
   font-size: 20px;
 }
-.progressBarItemWrap{
+
+.progressBarItemWrap {
   width: 250px;
   margin-right: 10px;
 }
 
-.progressBar{
+.progressBar {
   width: 100%;
   height: 2px;
   background-color: #B4B4B4;
 }
-.circle{
+
+.circle {
   width: 10px;
   height: 10px;
   border: 2px solid #B4B4B4;
@@ -42,23 +48,28 @@
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-.progressBarIn{
+
+.progressBarIn {
   display: flex;
   align-items: center;
   margin-bottom: 45px;
 }
-.progressWrap{
+
+.progressWrap {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 142px;
 }
-.progressBarFooterWrap{
+
+.progressBarFooterWrap {
   display: flex;
   align-items: center;
-  .line{
+
+  .line {
     margin-right: 30px;
   }
-  .button{
+
+  .button {
     width: 230px;
     padding: 0;
   }

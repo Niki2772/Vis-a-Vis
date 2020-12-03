@@ -1,0 +1,42 @@
+.infoCardsContainerWrap{
+  background-color: #F9F9F9;
+}
+
+//card styles
+.photoFrame{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #C4C4C4;
+}
+
+.infoCardWrap{
+  width: 360px;
+  margin-right: 150px;
+  margin-bottom: 130px;
+  .titleH3{
+    font-size: 28px;
+    line-height: 34px;
+    margin: 30px 0 20px;
+  }
+  .generalInfoDescription{
+    margin: 0 0 20px;
+  }
+  .swiperElUl{
+    margin-left: 22px;
+    li{
+      margin-bottom: 10px;
+      &::before{
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        left: -20px;
+      }
+    }
+  }
+}
+.infoCardsContainer{
+  padding: 160px 0 154px;
+  display: flex;
+  flex-wrap: wrap;
+}

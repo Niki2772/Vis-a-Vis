@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Vis-a-Vis</title>
     <link rel="stylesheet" href="public/assets/styles/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
@@ -345,7 +344,25 @@
             </div>
         </div>
     </div>
-    
+    <div id="app">
+        <div class="infoCardsContainerWrap">
+            <div class="container">
+                <ul class="infoCardsContainer">
+                    <li v-for="card in cards">
+                        <div class="infoCardWrap">
+                            <div class="photoFrame"></div>
+                            <h3 class="titleH3">{{card.title}}</h3>
+                            <div class="generalInfoDescription">{{card.description}}</div>
+                            <ul class="swiperElUl">
+                                <li v-for="list in card.list">{{list}}</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <footer class="footer">
@@ -432,10 +449,29 @@
         </div>
     </div>
 </footer>
+
 <script type="module" src="public/assets/js/main.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
+<script>
+
+    Vue.component('info-cards-container', {
+        template: '<h3 class="titleH3">{{card.title}} hii</h3>'
+    })
+
+    Vue.component('info-card-item', {
+        template: '                            <div class="infoCardWrap">\n' +
+            '                                <div class="photoFrame"></div>\n' +
+            '                                <h3 class="titleH3">{{card.title}}</h3>\n' +
+            '                                <div class="generalInfoDescription">{{card.description}}</div>\n' +
+            '                                <ul class="swiperElUl">\n' +
+            '                                    <li v-for="list in card.list">{{list}}</li>\n' +
+            '                                </ul>\n' +
+            '                            </div>\n'
+    })
+
+
+</script>
 </body>
 </html>
