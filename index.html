@@ -353,8 +353,10 @@
                     <ul class="infoCardsContainer">
                         <li v-for="card in shuffle(cards)">
                             <div class="infoCardWrap">
-                                <div class="photoFrame">
-                                    <i class="k-spinner--spin"></i>
+                                <div class="photoFrameWrap">
+                                    <div class="photoFrame">
+                                        <i class="k-spinner--spin"></i>
+                                    </div>
                                 </div>
                                 <h3 class="titleH3">{{card.title}}</h3>
                                 <div class="generalInfoDescription">{{card.description}}</div>
@@ -406,7 +408,7 @@
                             </div>
                             <div id="rangeSlider">
                                 <vue-slider
-                                        v-model="value1"
+                                        v-model="value"
                                         :adsorb="true"
                                         :interval="1000"
                                         :marks="true"
@@ -528,6 +530,11 @@
         components: {
             VueSlider: window['vue-slider-component']
         },
+        data: function () {
+            return{
+                value: 2500
+            }
+        }
 
     })
 

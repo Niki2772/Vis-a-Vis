@@ -30,6 +30,12 @@
     color: #B4B4B4;
     font-size: 18px;
     margin-top: 15px !important;
+    &:after{
+      content: ' грн';
+    }
+  }
+  .vue-slider-dot-tooltip-text:after{
+    content: ' грн';
   }
   .vue-slider-dot-tooltip-inner{
     font-size: 16px;
