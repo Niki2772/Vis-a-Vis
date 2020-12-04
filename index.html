@@ -5,6 +5,8 @@
     <title>Vis-a-Vis</title>
     <link rel="stylesheet" href="public/assets/styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="node_modules/@knekk/spinners/dist/kSpinners.css">
+
 </head>
 <body>
 
@@ -348,9 +350,11 @@
             <div class="infoCardsContainerWrap">
                 <div class="container">
                     <ul class="infoCardsContainer">
-                        <li v-for="card in cards">
+                        <li v-for="card in shuffle(cards)">
                             <div class="infoCardWrap">
-                                <div class="photoFrame"></div>
+                                <div class="photoFrame">
+                                    <i class="k-spinner--spin"></i>
+                                </div>
                                 <h3 class="titleH3">{{card.title}}</h3>
                                 <div class="generalInfoDescription">{{card.description}}</div>
                                 <ul class="swiperElUl">
@@ -378,7 +382,6 @@
             </div>
         </div>
         <div class="container">
-
             <div class="contactUsWrap">
                 <h2 class="titleH2">Lorem Ipsum is simply dummy text</h2>
                 <div class="contactUsIn">
@@ -400,7 +403,9 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
-                            <div class="priceRange">priceRange</div>
+                            <div class="priceRange">
+
+                            </div>
                             <div class="inputInnerWrap">
                                 <label class="privacyPolicy"><input type="radio" name="privacyPolicy" class="inputRadio" required>Lorem Ipsum is simply dummy</label>
                                 <button class="button" type="submit">Lorem Ipsum</button>

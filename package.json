@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "swiper": "^6.3.5"
+    "@knekk/spinners": "0.0.21",
+    "swiper": "^6.3.5",
+    "vue-slider-component": "^3.2.11"
   }
 }

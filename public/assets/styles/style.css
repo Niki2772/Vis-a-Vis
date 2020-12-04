@@ -582,6 +582,7 @@ svg:hover path {
   height: 100px;
   border-radius: 50%;
   background-color: #C4C4C4;
+  position: relative;
 }
 
 .infoCardWrap {
@@ -614,6 +615,24 @@ svg:hover path {
   padding: 160px 0 154px;
   display: flex;
   flex-wrap: wrap;
+}
+.infoCardsContainer li:first-child .photoFrame {
+  width: 70px;
+  height: 70px;
+}
+.infoCardsContainer li:first-child .k-spinner--spin {
+  display: block !important;
+}
+
+.k-spinner--spin {
+  position: absolute !important;
+  color: #0093E6 !important;
+  --spinner-size: 100px !important;
+  top: -15px;
+  left: -15px;
+  display: none !important;
+  background-image: radial-gradient(circle at center, transparent 57%, currentColor 62%, currentColor 40%, transparent 67%) !important;
+  animation-duration: 9s !important;
 }
 
 .advertisement {

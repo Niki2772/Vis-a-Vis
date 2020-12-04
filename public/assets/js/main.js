@@ -16,19 +16,36 @@ let swiper = new Swiper('.swiper-container', {
 });
 
 
+
 //Vue
+
 
 let vm = new Vue({
     el: '#app',
     data: {
         cards: [
             {title: 'Lorem Ipsum is simply dummy text', description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But also the leap into electronic typesetting']},
-            {title: 'Lorem Ipsum is text', description: 'look at its layout.look at its layout.look at its layout.look at its layout.look at its layout.look at its layout.', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But also the leap into electronic typesetting', 'Lorem Ipsum has been the industry\'s ']},
-            {title: 'Lorem Ipsum is simply dummy', description: 'It is a long established fact It is a long established fact It is a long established fact It is a long established fact ', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But typesetting']},
+            {title: 'Lorem  is text', description: 'look at its layout.look at its layout.look at its layout.look at its layout.look at its layout.look at its layout.', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But also the leap into electronic typesetting', 'Lorem Ipsum has been the industry\'s ']},
+            {title: 'Ipsum is simply dummy', description: 'It is a long established fact It is a long established fact It is a long established fact It is a long established fact ', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But typesetting']},
             {title: 'Lorem Ipsum is simply dummy text', description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But also the leap into electronic typesetting']},
             {title: 'Lorem Ipsum is simply dummy', description: 'It is a long established established established established ', list: ['Lorem Ipsum has been the industry\'s ', 'Standard dummy text ever since', 'But typesetting']},
         ],
+
+    },
+    methods: {
+        shuffle: function (array){
+            let currentIndex = array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
     }
+
 })
 
 
