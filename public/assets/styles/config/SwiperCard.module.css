@@ -1,0 +1,59 @@
+.swiperSlideEl {
+  width: 360px;
+  height: 460px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 70px 40px 40px 40px;
+}
+
+.slideElPic {
+  width: 75px;
+  height: 70px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #C4C4C4;
+  margin-right: 20px;
+}
+
+.slideElTitleWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.slideElTitle {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+}
+
+.swiperElUl {
+  margin-left: 40px;
+}
+.swiperElUl li {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  position: relative;
+  margin-bottom: 26px;
+}
+.swiperElUl li::before {
+  position: absolute;
+  top: 11px;
+  left: -22px;
+  content: "";
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #0093E6;
+}
+
+/*# sourceMappingURL=SwiperCard.module.css.map */
