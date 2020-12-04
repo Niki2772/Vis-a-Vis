@@ -344,25 +344,79 @@
             </div>
         </div>
     </div>
-    <div id="app">
-        <div class="infoCardsContainerWrap">
-            <div class="container">
-                <ul class="infoCardsContainer">
-                    <li v-for="card in cards">
-                        <div class="infoCardWrap">
-                            <div class="photoFrame"></div>
-                            <h3 class="titleH3">{{card.title}}</h3>
-                            <div class="generalInfoDescription">{{card.description}}</div>
-                            <ul class="swiperElUl">
-                                <li v-for="list in card.list">{{list}}</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+    <div id="app" class="vueComponents">
+            <div class="infoCardsContainerWrap">
+                <div class="container">
+                    <ul class="infoCardsContainer">
+                        <li v-for="card in cards">
+                            <div class="infoCardWrap">
+                                <div class="photoFrame"></div>
+                                <h3 class="titleH3">{{card.title}}</h3>
+                                <div class="generalInfoDescription">{{card.description}}</div>
+                                <ul class="swiperElUl">
+                                    <li v-for="list in card.list">{{list}}</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="contactUs">
+        <div class="advertisement">
+            <div class="slideElTitleWrap">
+                <div class="slideElPic"></div>
+                <div class="slideElTitle">Lorem Ipsum is simply</div>
+            </div>
+            <div class="slideElTitleWrap">
+                <div class="slideElPic"></div>
+                <div class="slideElTitle">Lorem Ipsum is simply</div>
+            </div>
+            <div class="slideElTitleWrap">
+                <div class="slideElPic"></div>
+                <div class="slideElTitle">Lorem Ipsum is simply</div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="contactUsWrap">
+                <h2 class="titleH2">Lorem Ipsum is simply dummy text</h2>
+                <div class="contactUsIn">
+                    <div class="contactUsColLeft">
+                        <h4 class="titleH4">It is a long established fact that a reader</h4>
+                        <form action="">
+                            <div class="floating-placeholder">
+                                <input id="name" name="name" type="text" required/>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="inputInnerWrap">
+                                <div class="floating-placeholder">
+                                    <input type="text" id="phone" name="phone" required>
+                                    <label for="phone">Phone</label>
+                                </div>
+
+                                <div class="floating-placeholder">
+                                    <input type="text" id="email" name="email"  required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="priceRange">priceRange</div>
+                            <div class="inputInnerWrap">
+                                <label class="privacyPolicy"><input type="radio" name="privacyPolicy" class="inputRadio" required>Lorem Ipsum is simply dummy</label>
+                                <button class="button" type="submit">Lorem Ipsum</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="contactUsColRight">
+                        <h4 class="titleH4">It is a long established fact that a reader</h4>
+                        <a href="mailto:support@email.com" class="emailLink">support@email.com</a>
+                        <div class="generalInfoDescription">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </main>
 
 <footer class="footer">
@@ -456,7 +510,7 @@
 
 <script>
 
-    Vue.component('info-cards-container', {
+  Vue.component('info-cards-container', {
         template: '<h3 class="titleH3">{{card.title}} hii</h3>'
     })
 

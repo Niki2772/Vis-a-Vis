@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import "config/Form.module.css";
 .header {
   background-color: #fff;
   height: 90px;
@@ -613,6 +614,86 @@ svg:hover path {
   padding: 160px 0 154px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.advertisement {
+  position: absolute;
+  width: 1595px;
+  height: 280px;
+  top: -140px;
+  right: 0;
+  background: #0093E6;
+  display: flex;
+  align-items: center;
+  border-radius: 30px 0px 0px 30px;
+  padding-left: 130px;
+}
+.advertisement .slideElTitleWrap {
+  margin-bottom: 0;
+  width: auto;
+  margin-right: 155px;
+}
+.advertisement .slideElTitleWrap .slideElPic {
+  width: 70px;
+  background: rgba(249, 249, 249, 0.5);
+  margin-right: 32px;
+}
+.advertisement .slideElTitleWrap .slideElTitle {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.contactUs {
+  position: relative;
+  background-color: #fff;
+}
+.contactUs .generalInfoDescription {
+  max-width: 360px;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 0;
+}
+.contactUs .titleH2 {
+  max-width: 480px;
+}
+.contactUs .titleH4 {
+  margin: 80px 0 45px;
+}
+.contactUsWrap {
+  padding: 288px 0 160px;
+}
+
+.contactUsColLeft {
+  width: 750px;
+  display: block;
+  margin-right: 160px;
+}
+
+.inputInnerWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactUsIn {
+  display: flex;
+  width: 100%;
+}
+
+.emailLink {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: #0093E6;
+  margin: 42px 0 66px;
+  transition: all 0.3s;
+}
+.emailLink:hover {
+  color: #0084cf;
 }
 
 /*# sourceMappingURL=style.css.map */

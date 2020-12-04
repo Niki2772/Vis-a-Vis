@@ -1,0 +1,51 @@
+.contactUs{
+  position: relative;
+  background-color: #fff;
+  .generalInfoDescription{
+    max-width: 360px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0;
+  }
+  .titleH2{
+    max-width: 480px;
+  }
+  .titleH4{
+    margin: 80px 0 45px;
+  }
+  .description{
+
+  }
+}
+.contactUsWrap{
+  padding: 288px 0 160px;
+}
+.contactUsColLeft{
+  width: 750px;
+  display: block;
+  margin-right: 160px;
+}
+.inputInnerWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactUsIn{
+  display: flex;
+  width: 100%;
+}
+.emailLink{
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: #0093E6;
+  margin: 42px 0 66px;
+  transition: all .3s;
+  &:hover{
+    color: #0084cf;
+  }
+}
+
