@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="public/assets/styles/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="node_modules/@knekk/spinners/dist/kSpinners.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
 
 </head>
 <body>
@@ -403,10 +404,17 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
-                            <div class="priceRange">
-
+                            <div id="rangeSlider">
+                                <vue-slider
+                                        v-model="value1"
+                                        :adsorb="true"
+                                        :interval="1000"
+                                        :marks="true"
+                                        :min="500"
+                                        :max="6500"
+                                ></vue-slider>
                             </div>
-                            <div class="inputInnerWrap">
+                            <div class="inputInnerWrap margin">
                                 <label class="privacyPolicy"><input type="radio" name="privacyPolicy" class="inputRadio" required>Lorem Ipsum is simply dummy</label>
                                 <button class="button" type="submit">Lorem Ipsum</button>
                             </div>
@@ -512,10 +520,19 @@
 <script type="module" src="public/assets/js/main.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js"></script>
 
 <script>
+    new Vue({
+        el: '#rangeSlider',
+        components: {
+            VueSlider: window['vue-slider-component']
+        },
 
-  Vue.component('info-cards-container', {
+    })
+
+
+    Vue.component('info-cards-container', {
         template: '<h3 class="titleH3">{{card.title}} hii</h3>'
     })
 
@@ -529,7 +546,6 @@
             '                                </ul>\n' +
             '                            </div>\n'
     })
-
 
 </script>
 </body>

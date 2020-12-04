@@ -1,0 +1,58 @@
+.vue-slider{
+  margin-top: 68px;
+  .vue-slider-rail{
+    position: absolute;
+    height: 4px;
+    background: #B4B4B4;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .vue-slider-mark{
+    cursor: pointer;
+    height: 10px !important;
+    border-radius: 3px;
+    width: 4px !important;
+    background: #B4B4B4;
+  }
+  .vue-slider-process, .vue-slider-mark-step{
+   background-color: transparent;
+  }
+
+  .vue-slider-dot-handle{
+    height: 20px;
+    width: 10px;
+    margin-top: -3px;
+    background: #0093E6;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  .vue-slider-mark-label{
+    color: #B4B4B4;
+    font-size: 18px;
+    margin-top: 15px !important;
+  }
+  .vue-slider-dot-tooltip-inner{
+    font-size: 16px;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 10px 18px;
+    min-width: 20px;
+    text-align: center;
+    color: #4A4D4E;
+    background-color: #fff;
+    border: 2px solid #0093E6;
+    box-sizing: content-box;
+    line-height: 100%;
+
+    &:after{
+      display: none;
+    }
+  }
+  .vue-slider-dot-tooltip-top{
+    left: 5px;
+  }
+}
+
+
+
+

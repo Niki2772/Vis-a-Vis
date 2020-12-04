@@ -1,3 +1,8 @@
+// import VueSlider from 'vue-slider-component'
+// import 'vue-slider-component/theme/default.css'
+
+// Vue.component('VueSlider', VueSlider)
+
 let swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 40,
@@ -20,7 +25,7 @@ let swiper = new Swiper('.swiper-container', {
 //Vue
 
 
-let vm = new Vue({
+let app = new Vue({
     el: '#app',
     data: {
         cards: [
@@ -46,6 +51,6 @@ let vm = new Vue({
         }
     }
 
-})
+});
 
 

@@ -1,5 +1,6 @@
 @import 'reset.css';
 @import "config/Form.module.css";
+@import "config/RangeSlider.module.css";
 .header {
   background-color: #fff;
   height: 90px;
@@ -713,6 +714,10 @@ svg:hover path {
 }
 .emailLink:hover {
   color: #0084cf;
+}
+
+.margin {
+  margin-top: 92px;
 }
 
 /*# sourceMappingURL=style.css.map */
