@@ -249,7 +249,9 @@
                         </svg>
                         <div class="progressBarIn">
                             <div class="circle"></div>
-                            <div class="progressBar"></div>
+                            <div id="myProgress" >
+                                <div id="myBar"></div>
+                            </div>
                         </div>
                         <div class="progressBarDesription">Lorem Ipsum is simply dummy</div>
                     </div>
@@ -272,7 +274,9 @@
                         </svg>
                         <div class="progressBarIn">
                             <div class="circle"></div>
-                            <div class="progressBar"></div>
+                            <div id="myProgress" >
+                                <div id="myBar"></div>
+                            </div>
                         </div>
                         <div class="progressBarDesription">Lorem Ipsum is simply dummy</div>
                     </div>
@@ -289,7 +293,9 @@
                         </svg>
                         <div class="progressBarIn">
                             <div class="circle"></div>
-                            <div class="progressBar"></div>
+                            <div id="myProgress" >
+                                <div id="myBar"></div>
+                            </div>
                         </div>
                         <div class="progressBarDesription">Lorem Ipsum is simply dummy</div>
                     </div>
@@ -320,7 +326,9 @@
 
                         <div class="progressBarIn">
                             <div class="circle"></div>
-                            <div class="progressBar"></div>
+                            <div id="myProgress" >
+                                <div id="myBar"></div>
+                            </div>
                         </div>
                         <div class="progressBarDesription">Lorem Ipsum is simply dummy</div>
                     </div>
@@ -340,11 +348,13 @@
                         <div class="progressBarDesription">Lorem Ipsum is simply dummy</div>
                     </div>
                 </div>
+
                 <div class="progressBarFooterWrap">
                     <div class="line"></div>
-                    <button class="button">Lorem Ipsum</button>
+                    <button class="button" onclick="move()">Lorem Ipsum</button>
                 </div>
             </div>
+
         </div>
     </div>
     <div id="app" class="vueComponents">
@@ -525,6 +535,26 @@
 <script src="./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js"></script>
 
 <script>
+
+    let i = 0;
+    function move() {
+        if (i == 0) {
+            i = 1;
+            let elem = document.getElementById("myBar");
+            let width = 1;
+            let id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                }
+            }
+        }
+    }
+
     new Vue({
         el: '#rangeSlider',
         components: {

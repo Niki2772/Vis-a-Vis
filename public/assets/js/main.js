@@ -50,7 +50,9 @@ let app = new Vue({
             return array;
         }
     }
-
 });
+
+
+
 
 
