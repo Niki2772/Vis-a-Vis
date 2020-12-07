@@ -394,21 +394,18 @@
                     <div class="contactUsColLeft">
                         <h4 class="titleH4">It is a long established fact that a reader</h4>
 
-                        <form action="" id="contactForm" novalidate>
-
+                        <form id="contactForm" novalidate>
                             <div class="floating-placeholder">
                                 <input type="text" id="name" name="Name" required onfocusout="validateFirstName()"/>
                                 <label for="Name">Name</label>
                                 <div class="helperText"></div>
                             </div>
-
                             <div class="inputInnerWrap">
                                 <div class="floating-placeholder">
                                     <input type="text" id="phone" name="Phone" required onfocusout="validatePhoneNumber()">
                                     <label for="Phone">Phone</label>
                                     <div class="helperText"></div>
                                 </div>
-
                                 <div class="floating-placeholder">
                                     <input type="text" id="email" name="Email" required onfocusout="validateEmail()">
                                     <label for="Email">Email</label>
@@ -425,15 +422,15 @@
                                         :max="6500"
                                 ></vue-slider>
                             </div>
-
-                            <div class="inputInnerWrap margin">
+                            <div class="inputInnerWrap margin" id="inputInnerWrap">
                                 <label class="privacyPolicy">
                                     <input type="radio" id="privacyPolicy" name="privacyPolicy" class="inputRadio"
-                                           required onfocusout="validatePrivacyPolicy">Lorem Ipsum is simply dummy</label>
-                                <div class="helperText"></div>
-                                <button id="formSubmitBtn" class="button" type="submit">Lorem Ipsum</button>
+                                           required >Lorem Ipsum is simply dummy
+                                    <div></div>
+                                    <div class="helperText"></div>
+                                </label>
+                                <button type="submit" id="formSubmitBtn" class="button">Lorem Ipsum</button>
                             </div>
-
                         </form>
                     </div>
                     <div class="contactUsColRight">

@@ -39,6 +39,7 @@ input[type='radio'] {
   cursor: pointer;
   display: flex;
   align-items: center;
+  position: relative;
 }
 input[type='radio']::before {
   content: '';

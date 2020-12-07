@@ -1,20 +1,46 @@
-// input fields
+//input fields
 
 const name = document.getElementById('name');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
 const privacyPolicy = document.getElementById('privacyPolicy');
-
 //form
 
 const form = document.getElementById('contactForm');
-
 
 //validators
 
 function validateFirstName() {
     if (checkIfEmpty(name)) return;
     if (!checkIfOnlyLetters(name)) return;
+    return true;
+}
+
+function validateEmail() {
+    if (checkIfEmpty(email)) return;
+    if (!containsCharacters(email, 1)) return;
+    return true;
+}
+
+function validatePhoneNumber() {
+    if (checkIfEmpty(phone)) return;
+    if (!containsCharacters(phone, 2)) return;
+    return true;
+}
+
+function validatePrivacyPolicy() {
+    if (ifPrivacyPolicyChecked(privacyPolicy)) return;
+    return true;
+}
+
+function setInvalid(field, message) {
+    field.class = 'invalid';
+    field.nextElementSibling.nextElementSibling.innerHTML = message;
+}
+
+function setValid(field) {
+    field.class = 'valid';
+    field.nextElementSibling.nextElementSibling.innerHTML = '';
 }
 
 function checkIfEmpty(field) {
@@ -32,16 +58,6 @@ function isEmpty(value) {
     return false;
 }
 
-function setInvalid(field, message) {
-    field.class = 'invalid';
-    field.nextElementSibling.nextElementSibling.innerHTML = message;
-}
-
-function setValid(field) {
-    field.class = 'valid';
-    field.nextElementSibling.nextElementSibling.innerHTML = '';
-}
-
 function checkIfOnlyLetters(field) {
     if (/^[a-zA-Z ]+$/.test(field.value)) {
         setValid(field);
@@ -52,17 +68,14 @@ function checkIfOnlyLetters(field) {
     }
 }
 
-
-function validateEmail() {
-    if (checkIfEmpty(email)) return;
-    if (!containsCharacters(email, 1)) return;
-    return true;
-}
-
-function validatePhoneNumber() {
-    if (checkIfEmpty(phone)) return;
-    if (!containsCharacters(phone, 2)) return;
-    return true;
+function ifPrivacyPolicyChecked(field) {
+    if (field.checked) {
+        setValid(field);
+        return false;
+    } else {
+        setInvalid(field, `<span class="star" >*</span>This field is required`);
+        return true;
+    }
 }
 
 function containsCharacters(field, code) {
@@ -90,5 +103,25 @@ function matchWithRegEx(regEx, field, message) {
         return false;
     }
 }
+
+//handle form
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if(
+        validateFirstName() &&
+        validatePhoneNumber() &&
+        validateEmail() &&
+        validatePrivacyPolicy()
+    ){
+        const userName = name.value;
+        const userPhone = phone.value;
+        const userEmail = email.value;
+        const userAgreement = true;
+        console.log(userName, userPhone, userEmail, userAgreement);
+    }
+})
+
+
 
 
