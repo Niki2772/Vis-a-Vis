@@ -393,20 +393,26 @@
                 <div class="contactUsIn">
                     <div class="contactUsColLeft">
                         <h4 class="titleH4">It is a long established fact that a reader</h4>
-                        <form action="">
+
+                        <form action="" id="contactForm" novalidate>
+
                             <div class="floating-placeholder">
-                                <input id="name" name="name" type="text" required/>
-                                <label for="name">Name</label>
+                                <input type="text" id="name" name="Name" required onfocusout="validateFirstName()"/>
+                                <label for="Name">Name</label>
+                                <div class="helperText"></div>
                             </div>
+
                             <div class="inputInnerWrap">
                                 <div class="floating-placeholder">
-                                    <input type="text" id="phone" name="phone" required>
-                                    <label for="phone">Phone</label>
+                                    <input type="text" id="phone" name="Phone" required onfocusout="validatePhoneNumber()">
+                                    <label for="Phone">Phone</label>
+                                    <div class="helperText"></div>
                                 </div>
 
                                 <div class="floating-placeholder">
-                                    <input type="text" id="email" name="email" required>
-                                    <label for="email">Email</label>
+                                    <input type="text" id="email" name="Email" required onfocusout="validateEmail()">
+                                    <label for="Email">Email</label>
+                                    <div class="helperText"></div>
                                 </div>
                             </div>
                             <div id="rangeSlider">
@@ -419,10 +425,13 @@
                                         :max="6500"
                                 ></vue-slider>
                             </div>
+
                             <div class="inputInnerWrap margin">
-                                <label class="privacyPolicy"><input type="radio" name="privacyPolicy" class="inputRadio"
-                                                                    required>Lorem Ipsum is simply dummy</label>
-                                <button class="button" type="submit">Lorem Ipsum</button>
+                                <label class="privacyPolicy">
+                                    <input type="radio" id="privacyPolicy" name="privacyPolicy" class="inputRadio"
+                                           required onfocusout="validatePrivacyPolicy">Lorem Ipsum is simply dummy</label>
+                                <div class="helperText"></div>
+                                <button id="formSubmitBtn" class="button" type="submit">Lorem Ipsum</button>
                             </div>
 
                         </form>
@@ -533,6 +542,12 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js"></script>
+<script src="public/assets/js/validation.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="public/assets/js/inputMask.js"></script>
+
+
+
 
 </body>
 </html>
