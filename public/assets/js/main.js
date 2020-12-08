@@ -95,15 +95,17 @@ let app = new Vue({
     }
 });
 
-let vueSlider = new Vue({
-    el: '#rangeSlider',
-    components: {
-        VueSlider: window['vue-slider-component']
-    },
-    data: function () {
-        return {
-            value: 2500
+const VueSlider = Vue.component('vue-slider',
+    {
+        // el: '#rangeSlider',
+        components: {
+            VueSlider: window['vue-slider-component']
+        },
+        data: function () {
+            return {
+                value: 2500
+            }
         }
     }
-})
+)
 
