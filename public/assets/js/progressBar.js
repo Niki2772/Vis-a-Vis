@@ -24,11 +24,10 @@ function move(element) {
 let progressBarOffset = document.getElementById("progressBarBlock").offsetTop;
 
 window.addEventListener('scroll', function() {
-    if(window.pageYOffset >= progressBarOffset){
+    if(window.pageYOffset == progressBarOffset){
         setTimeout(move, 1000, prBarFirst);
         setTimeout(move, 2000, prBarSecond);
         setTimeout(move, 3000, prBarThird);
         setTimeout(move, 4000, prBarFourth);
-
     }
 });
