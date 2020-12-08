@@ -95,7 +95,7 @@ let app = new Vue({
     }
 });
 
-new Vue({
+let vueSlider = new Vue({
     el: '#rangeSlider',
     components: {
         VueSlider: window['vue-slider-component']
