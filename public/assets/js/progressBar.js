@@ -25,10 +25,10 @@ function move(element) {
 }
 
 window.addEventListener('scroll', function () {
-    if (window.pageYOffset == progressBarOffset) {
+    if (window.pageYOffset >= progressBarOffset) {
         setTimeout(move, 1000, prBarFirst);
-        setTimeout(move, 2000, prBarSecond);
-        setTimeout(move, 3000, prBarThird);
-        setTimeout(move, 4000, prBarFourth);
+        setTimeout(move, 2100, prBarSecond);
+        setTimeout(move, 3200, prBarThird);
+        setTimeout(move, 4500, prBarFourth);
     }
 });
