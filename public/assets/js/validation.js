@@ -8,6 +8,40 @@ const privacyPolicy = document.getElementById('privacyPolicy');
 
 const form = document.getElementById('contactForm');
 
+//handle form
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (
+        validateFirstName() &&
+        validatePhoneNumber() &&
+        validateEmail() &&
+        validatePrivacyPolicy()
+    ) {
+        let userInfo = {
+            userName: name.value,
+            userPhone: phone.value,
+            userEmail: email.value,
+            userAgreement: true
+        }
+
+        fetch('/form-sending', {
+            method: 'POST',
+            body: JSON.stringify(userInfo),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        })
+            .then((response) => (response.json()))
+            .then((response) => {
+                console.log(response);
+            })
+            .catch(function (error) {
+                alert(error);
+            })
+    }
+})
+
 //validators
 
 function validateFirstName() {
@@ -103,24 +137,6 @@ function matchWithRegEx(regEx, field, message) {
         return false;
     }
 }
-
-//handle form
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    if(
-        validateFirstName() &&
-        validatePhoneNumber() &&
-        validateEmail() &&
-        validatePrivacyPolicy()
-    ){
-        const userName = name.value;
-        const userPhone = phone.value;
-        const userEmail = email.value;
-        const userAgreement = true;
-        console.log(userName, userPhone, userEmail, userAgreement);
-    }
-})
 
 
 

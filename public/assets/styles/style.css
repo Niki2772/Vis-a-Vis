@@ -574,6 +574,12 @@ svg:hover path {
   background-color: #B4B4B4;
 }
 
+#prBarFirst, #prBarSecond, #prBarThird, #prBarFourth {
+  width: 0;
+  height: 2px;
+  background-color: #0093E6;
+}
+
 .infoCardsContainerWrap {
   background-color: #F9F9F9;
 }
